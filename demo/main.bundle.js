@@ -95,52 +95,29 @@ module.exports = __webpack_require__("2YZa");
 /***/ }),
 
 /***/ "2YZa":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
-
-// EXTERNAL MODULE: external "ReactDOM"
-var external_ReactDOM_ = __webpack_require__("faye");
-
-// CONCATENATED MODULE: ./src/CoreAppComponent1.tsx
-
-var CoreAppComponentA = function () {
-    return external_React_["createElement"]("div", { className: "card" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"]("h5", { className: "card-title" }, "CoreAppComponentA"),
-            external_React_["createElement"]("p", { className: "card-text" }, "Normal component from core app")));
-};
-/* harmony default export */ var CoreAppComponent1 = (CoreAppComponentA);
-
-// EXTERNAL MODULE: external "MFE.UIC"
-var external_MFE_UIC_ = __webpack_require__("nE34");
-
-// EXTERNAL MODULE: external "MFE.LAC"
-var external_MFE_LAC_ = __webpack_require__("FxD2");
-
-// CONCATENATED MODULE: ./src/index.tsx
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__("cDcd");
+var ReactDOM = __webpack_require__("faye");
 console.log("Hello from App");
-
-
-
-external_ReactDOM_["render"](external_React_["createElement"](external_React_["Fragment"], null,
-    external_React_["createElement"](external_MFE_UIC_["Logo"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_UIC_["UIComponentA"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_UIC_["UIComponentBLazy"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_LAC_["LayoutComponentA"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_LAC_["LayoutComponentBLazy"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](CoreAppComponent1, null)), document.getElementById('root'));
+var CoreAppComponent1_1 = __webpack_require__("kGOP");
+var ui_components_1 = __webpack_require__("nE34");
+var layout_components_1 = __webpack_require__("FxD2");
+ReactDOM.render(React.createElement(React.Fragment, null,
+    React.createElement(ui_components_1.Logo, null),
+    React.createElement("hr", null),
+    React.createElement(ui_components_1.UIComponentA, null),
+    React.createElement("hr", null),
+    React.createElement(ui_components_1.UIComponentBLazy, null),
+    React.createElement("hr", null),
+    React.createElement(layout_components_1.LayoutComponentA, null),
+    React.createElement("hr", null),
+    React.createElement(layout_components_1.LayoutComponentBLazy, null),
+    React.createElement("hr", null),
+    React.createElement(CoreAppComponent1_1.default, null)), document.getElementById('root'));
 
 
 /***/ }),
@@ -163,6 +140,24 @@ module.exports = React;
 /***/ (function(module, exports) {
 
 module.exports = ReactDOM;
+
+/***/ }),
+
+/***/ "kGOP":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__("cDcd");
+exports.CoreAppComponentA = function () {
+    return React.createElement("div", { className: "card" },
+        React.createElement("div", { className: "card-body" },
+            React.createElement("h5", { className: "card-title" }, "CoreAppComponentA"),
+            React.createElement("p", { className: "card-text" }, "Normal component from core app")));
+};
+exports.default = exports.CoreAppComponentA;
+
 
 /***/ }),
 

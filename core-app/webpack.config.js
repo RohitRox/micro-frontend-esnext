@@ -25,8 +25,8 @@ module.exports = {
     // Use external version of React
     "react": "React",
     "react-dom": "ReactDOM",
-    "ui-components": "UIC",
-    "layout-components": "LAC"
+    "ui-components": "MFE.UIC",
+    "layout-components": "MFE.LAC"
   },
   plugins: [
     new HtmlWebpackPlugin({
