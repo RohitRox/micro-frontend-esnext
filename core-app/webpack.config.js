@@ -25,6 +25,7 @@ module.exports = {
     // Use external version of React
     "react": "React",
     "react-dom": "ReactDOM",
+    "layout-components": "MFE.LAC",
     "ui-components": "MFE.UIC"
   },
   plugins: [

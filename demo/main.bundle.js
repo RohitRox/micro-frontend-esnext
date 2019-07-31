@@ -1,50 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
-/******/ 		var chunkIds = data[0];
-/******/ 		var moreModules = data[1];
-/******/
-/******/
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			}
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
-/******/ 		while(resolves.length) {
-/******/ 			resolves.shift()();
-/******/ 		}
-/******/
-/******/ 	};
-/******/
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// Promise = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
-/******/ 		0: 0
-/******/ 	};
-/******/
-/******/
-/******/
-/******/ 	// script path function
-/******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + chunkId + ".main.bundle.js"
-/******/ 	}
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -70,67 +26,6 @@
 /******/ 		return module.exports;
 /******/ 	}
 /******/
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		var promises = [];
-/******/
-/******/
-/******/ 		// JSONP chunk loading for javascript
-/******/
-/******/ 		var installedChunkData = installedChunks[chunkId];
-/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
-/******/
-/******/ 			// a Promise means "currently loading".
-/******/ 			if(installedChunkData) {
-/******/ 				promises.push(installedChunkData[2]);
-/******/ 			} else {
-/******/ 				// setup Promise in chunk cache
-/******/ 				var promise = new Promise(function(resolve, reject) {
-/******/ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
-/******/ 				});
-/******/ 				promises.push(installedChunkData[2] = promise);
-/******/
-/******/ 				// start chunk loading
-/******/ 				var script = document.createElement('script');
-/******/ 				var onScriptComplete;
-/******/
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.src = jsonpScriptSrc(chunkId);
-/******/
-/******/ 				// create error before stack unwound to get useful stacktrace later
-/******/ 				var error = new Error();
-/******/ 				onScriptComplete = function (event) {
-/******/ 					// avoid mem leaks in IE.
-/******/ 					script.onerror = script.onload = null;
-/******/ 					clearTimeout(timeout);
-/******/ 					var chunk = installedChunks[chunkId];
-/******/ 					if(chunk !== 0) {
-/******/ 						if(chunk) {
-/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 							error.name = 'ChunkLoadError';
-/******/ 							error.type = errorType;
-/******/ 							error.request = realSrc;
-/******/ 							chunk[1](error);
-/******/ 						}
-/******/ 						installedChunks[chunkId] = undefined;
-/******/ 					}
-/******/ 				};
-/******/ 				var timeout = setTimeout(function(){
-/******/ 					onScriptComplete({ type: 'timeout', target: script });
-/******/ 				}, 120000);
-/******/ 				script.onerror = script.onload = onScriptComplete;
-/******/ 				document.head.appendChild(script);
-/******/ 			}
-/******/ 		}
-/******/ 		return Promise.all(promises);
-/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -184,16 +79,6 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	// on error function for async loading
-/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
-/******/
-/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
-/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
-/******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-/******/ 	var parentJsonpFunction = oldJsonpFunction;
-/******/
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -221,40 +106,27 @@ var external_React_ = __webpack_require__("cDcd");
 // EXTERNAL MODULE: external "ReactDOM"
 var external_ReactDOM_ = __webpack_require__("faye");
 
+// CONCATENATED MODULE: ./src/CoreAppComponent1.tsx
+
+var CoreAppComponentA = function () {
+    return external_React_["createElement"]("div", { className: "card" },
+        external_React_["createElement"]("div", { className: "card-body" },
+            external_React_["createElement"]("h5", { className: "card-title" }, "CoreAppComponentA"),
+            external_React_["createElement"]("p", { className: "card-text" }, "Normal component from core app")));
+};
+/* harmony default export */ var CoreAppComponent1 = (CoreAppComponentA);
+
 // EXTERNAL MODULE: external "MFE.UIC"
 var external_MFE_UIC_ = __webpack_require__("nE34");
 
-// CONCATENATED MODULE: ../layout-components/src/components/LayoutComponentA/index.tsx
-
-
-var LayoutComponentA = function () {
-    return external_React_["createElement"]("div", { className: "card layout-component-wrapper" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"](external_MFE_UIC_["Logo"], null),
-            external_React_["createElement"]("h5", { className: "card-title" }, "LayoutComponentA that renders Logo from ui-components")));
-};
-/* harmony default export */ var components_LayoutComponentA = (LayoutComponentA);
-
-// CONCATENATED MODULE: ../layout-components/src/components/LayoutComponentB/lazy.tsx
-
-
-var LayoutComponentB = Object(external_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "uJrw")); });
-var LayoutComponentBLazy = function () {
-    return external_React_["createElement"]("div", { className: "central-comp" },
-        external_React_["createElement"](external_React_["Suspense"], { fallback: external_React_["createElement"]("p", null, "Loading LayoutComponentB ...") },
-            external_React_["createElement"](LayoutComponentB, null)));
-};
-/* harmony default export */ var lazy = (LayoutComponentBLazy);
-
-// CONCATENATED MODULE: ../layout-components/src/index.ts
-
-
-
+// EXTERNAL MODULE: external "MFE.LAC"
+var external_MFE_LAC_ = __webpack_require__("FxD2");
 
 // CONCATENATED MODULE: ./src/index.tsx
 
 
 console.log("Hello from App");
+
 
 
 external_ReactDOM_["render"](external_React_["createElement"](external_React_["Fragment"], null,
@@ -264,10 +136,19 @@ external_ReactDOM_["render"](external_React_["createElement"](external_React_["F
     external_React_["createElement"]("hr", null),
     external_React_["createElement"](external_MFE_UIC_["UIComponentBLazy"], null),
     external_React_["createElement"]("hr", null),
-    external_React_["createElement"](components_LayoutComponentA, null),
+    external_React_["createElement"](external_MFE_LAC_["LayoutComponentA"], null),
     external_React_["createElement"]("hr", null),
-    external_React_["createElement"](lazy, null)), document.getElementById('root'));
+    external_React_["createElement"](external_MFE_LAC_["LayoutComponentBLazy"], null),
+    external_React_["createElement"]("hr", null),
+    external_React_["createElement"](CoreAppComponent1, null)), document.getElementById('root'));
 
+
+/***/ }),
+
+/***/ "FxD2":
+/***/ (function(module, exports) {
+
+module.exports = MFE.LAC;
 
 /***/ }),
 
