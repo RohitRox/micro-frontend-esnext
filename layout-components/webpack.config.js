@@ -13,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, '../demo/layout-components/dist', version),
     library: ['MFE', 'LAC'],
     publicPath: `https://rohitrox.github.io/micro-frontend-esnext/demo/layout-components/dist/${version}/`,
-    // jsonpFunction: 'wpJsonpLAC'
+    jsonpFunction: 'wpJsonpLAC'
   },
   module: {
     rules: [
