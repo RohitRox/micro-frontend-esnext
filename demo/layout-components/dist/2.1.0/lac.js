@@ -211,8 +211,8 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: external "React"
 var external_React_ = __webpack_require__("cDcd");
 
-// EXTERNAL MODULE: external "MFE.LAC"
-var external_MFE_LAC_ = __webpack_require__("nE34");
+// EXTERNAL MODULE: external "MFE.UIC"
+var external_MFE_UIC_ = __webpack_require__("nE34");
 
 // CONCATENATED MODULE: ./src/components/LayoutComponentA/index.tsx
 
@@ -220,7 +220,7 @@ var external_MFE_LAC_ = __webpack_require__("nE34");
 var LayoutComponentA = function () {
     return external_React_["createElement"]("div", { className: "card layout-component-wrapper" },
         external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"](external_MFE_LAC_["Logo"], null),
+            external_React_["createElement"](external_MFE_UIC_["Logo"], null),
             external_React_["createElement"]("h5", { className: "card-title" }, "LayoutComponentA that renders Logo from ui-components")));
 };
 /* harmony default export */ var components_LayoutComponentA = (LayoutComponentA);
@@ -272,7 +272,7 @@ module.exports = React;
 /***/ "nE34":
 /***/ (function(module, exports) {
 
-module.exports = MFE.LAC;
+module.exports = MFE.UIC;
 
 /***/ })
 

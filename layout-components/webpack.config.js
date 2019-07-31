@@ -64,7 +64,7 @@ module.exports = {
     // Use external version of React
     "react": "React",
     "react-dom": "ReactDOM",
-    "ui-components": "MFE.LAC"
+    "ui-components": "MFE.UIC"
   },
   plugins: [
     new MiniCssExtractPlugin({
