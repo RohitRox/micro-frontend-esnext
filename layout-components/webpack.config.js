@@ -12,7 +12,8 @@ module.exports = {
     filename: 'lac.js',
     path: path.resolve(__dirname, '../demo/layout-components/dist', version),
     library: ['MFE', 'LAC'],
-    publicPath: `https://rohitrox.github.io/micro-frontend-esnext/demo/layout-components/dist/${version}/`
+    publicPath: `https://rohitrox.github.io/micro-frontend-esnext/demo/layout-components/dist/${version}/`,
+    jsonpFunction: 'wpJsonpLAC'
   },
   module: {
     rules: [

@@ -12,7 +12,8 @@ module.exports = {
     filename: 'uic.js',
     path: path.resolve(__dirname, '../demo/ui-components/dist', version),
     library: ['MFE', 'UIC'],
-    publicPath: `https://rohitrox.github.io/micro-frontend-esnext/demo/ui-components/dist/${version}/`
+    publicPath: `https://rohitrox.github.io/micro-frontend-esnext/demo/ui-components/dist/${version}/`,
+    jsonpFunction: 'wpJsonpUIC'
   },
   module: {
     rules: [
