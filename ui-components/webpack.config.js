@@ -69,4 +69,8 @@ module.exports = {
       filename: 'uic.css'
     })
   ],
+  optimization: {
+    moduleIds: 'hashed',
+    minimize: false
+  }
 };

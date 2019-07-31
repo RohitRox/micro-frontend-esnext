@@ -70,4 +70,8 @@ module.exports = {
       filename: 'lac.css'
     })
   ],
+  optimization: {
+    moduleIds: 'hashed',
+    minimize: false
+  }
 };

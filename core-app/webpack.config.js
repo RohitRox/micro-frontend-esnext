@@ -31,5 +31,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './static/index.html'
     })
-  ]
+  ],
+  optimization: {
+    moduleIds: 'hashed',
+    minimize: false
+  }
 };
