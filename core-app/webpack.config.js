@@ -22,9 +22,8 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js", ".scss"]
   },
   externals: {
-    // Use external version of React
-    "react": "React",
-    "react-dom": "ReactDOM",
+    "react": "MFE.GLB.React",
+    "react-dom": "MFE.GLB.ReactDOM",
     "ui-components": "MFE.UIC",
     "layout-components": "MFE.LAC"
   },

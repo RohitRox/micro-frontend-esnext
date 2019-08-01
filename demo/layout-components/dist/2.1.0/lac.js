@@ -208,8 +208,8 @@ var MFE = typeof MFE === "object" ? MFE : {}; MFE["LAC"] =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
+// EXTERNAL MODULE: external "MFE.GLB.React"
+var external_MFE_GLB_React_ = __webpack_require__("cDcd");
 
 // EXTERNAL MODULE: external "MFE.UIC"
 var external_MFE_UIC_ = __webpack_require__("nE34");
@@ -218,21 +218,21 @@ var external_MFE_UIC_ = __webpack_require__("nE34");
 
 
 var LayoutComponentA = function () {
-    return external_React_["createElement"]("div", { className: "card layout-component-wrapper" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"](external_MFE_UIC_["Logo"], null),
-            external_React_["createElement"]("h5", { className: "card-title" }, "LayoutComponentA that renders Logo from ui-components")));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "card layout-component-wrapper" },
+        external_MFE_GLB_React_["createElement"]("div", { className: "card-body" },
+            external_MFE_GLB_React_["createElement"](external_MFE_UIC_["Logo"], null),
+            external_MFE_GLB_React_["createElement"]("h5", { className: "card-title" }, "LayoutComponentA that renders Logo from ui-components")));
 };
 /* harmony default export */ var components_LayoutComponentA = (LayoutComponentA);
 
 // CONCATENATED MODULE: ./src/components/LayoutComponentB/lazy.tsx
 
 
-var LayoutComponentB = Object(external_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "po5T")); });
+var LayoutComponentB = Object(external_MFE_GLB_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "po5T")); });
 var LayoutComponentBLazy = function () {
-    return external_React_["createElement"]("div", { className: "central-comp" },
-        external_React_["createElement"](external_React_["Suspense"], { fallback: external_React_["createElement"]("p", null, "Loading LayoutComponentB ...") },
-            external_React_["createElement"](LayoutComponentB, null)));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "central-comp" },
+        external_MFE_GLB_React_["createElement"](external_MFE_GLB_React_["Suspense"], { fallback: external_MFE_GLB_React_["createElement"]("p", null, "Loading LayoutComponentB ...") },
+            external_MFE_GLB_React_["createElement"](LayoutComponentB, null)));
 };
 /* harmony default export */ var lazy = (LayoutComponentBLazy);
 
@@ -258,7 +258,7 @@ module.exports = __webpack_require__("/7QA");
 /***/ "cDcd":
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = MFE.GLB.React;
 
 /***/ }),
 

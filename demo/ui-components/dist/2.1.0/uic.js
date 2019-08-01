@@ -208,38 +208,38 @@ var MFE = typeof MFE === "object" ? MFE : {}; MFE["UIC"] =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
+// EXTERNAL MODULE: external "MFE.GLB.React"
+var external_MFE_GLB_React_ = __webpack_require__("cDcd");
 
 // CONCATENATED MODULE: ./src/components/Logo/index.tsx
 
 var LogoImg = __webpack_require__("gKL9");
 var Logo = function () {
-    return external_React_["createElement"]("div", { className: "card" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"]("img", { height: "44spx", width: "44px", src: LogoImg, alt: "Logo" }),
-            external_React_["createElement"]("p", { className: "card-text" }, "Logo from ui-components")));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "card" },
+        external_MFE_GLB_React_["createElement"]("div", { className: "card-body" },
+            external_MFE_GLB_React_["createElement"]("img", { height: "44spx", width: "44px", src: LogoImg, alt: "Logo" }),
+            external_MFE_GLB_React_["createElement"]("p", { className: "card-text" }, "Logo from ui-components")));
 };
 /* harmony default export */ var components_Logo = (Logo);
 
 // CONCATENATED MODULE: ./src/components/UIComponentA/index.tsx
 
 var UIComponentA = function () {
-    return external_React_["createElement"]("div", { className: "card" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"]("h5", { className: "card-title" }, "UIComponentA"),
-            external_React_["createElement"]("p", { className: "card-text" }, "Normal component from ui-components")));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "card" },
+        external_MFE_GLB_React_["createElement"]("div", { className: "card-body" },
+            external_MFE_GLB_React_["createElement"]("h5", { className: "card-title" }, "UIComponentA"),
+            external_MFE_GLB_React_["createElement"]("p", { className: "card-text" }, "Normal component from ui-components")));
 };
 /* harmony default export */ var components_UIComponentA = (UIComponentA);
 
 // CONCATENATED MODULE: ./src/components/UIComponentB/lazy.tsx
 
 
-var UIComponentB = Object(external_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "0Lws")); });
+var UIComponentB = Object(external_MFE_GLB_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "0Lws")); });
 var UIComponentBLazy = function () {
-    return external_React_["createElement"]("div", { className: "central-comp" },
-        external_React_["createElement"](external_React_["Suspense"], { fallback: external_React_["createElement"]("p", null, "Loading UIComponentB ...") },
-            external_React_["createElement"](UIComponentB, null)));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "central-comp" },
+        external_MFE_GLB_React_["createElement"](external_MFE_GLB_React_["Suspense"], { fallback: external_MFE_GLB_React_["createElement"]("p", null, "Loading UIComponentB ...") },
+            external_MFE_GLB_React_["createElement"](UIComponentB, null)));
 };
 /* harmony default export */ var lazy = (UIComponentBLazy);
 
@@ -267,7 +267,7 @@ module.exports = __webpack_require__("/7QA");
 /***/ "cDcd":
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = MFE.GLB.React;
 
 /***/ }),
 

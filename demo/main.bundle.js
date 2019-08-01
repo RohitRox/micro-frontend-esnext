@@ -215,30 +215,30 @@ module.exports = __webpack_require__("2YZa");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: external "React"
-var external_React_ = __webpack_require__("cDcd");
+// EXTERNAL MODULE: external "MFE.GLB.React"
+var external_MFE_GLB_React_ = __webpack_require__("cDcd");
 
-// EXTERNAL MODULE: external "ReactDOM"
-var external_ReactDOM_ = __webpack_require__("faye");
+// EXTERNAL MODULE: external "MFE.GLB.ReactDOM"
+var external_MFE_GLB_ReactDOM_ = __webpack_require__("faye");
 
 // CONCATENATED MODULE: ./src/CoreAppComponent1.tsx
 
 var CoreAppComponentA = function () {
-    return external_React_["createElement"]("div", { className: "card" },
-        external_React_["createElement"]("div", { className: "card-body" },
-            external_React_["createElement"]("h5", { className: "card-title" }, "CoreAppComponentA"),
-            external_React_["createElement"]("p", { className: "card-text" }, "Normal component from core app")));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "card" },
+        external_MFE_GLB_React_["createElement"]("div", { className: "card-body" },
+            external_MFE_GLB_React_["createElement"]("h5", { className: "card-title" }, "CoreAppComponentA"),
+            external_MFE_GLB_React_["createElement"]("p", { className: "card-text" }, "Normal component from core app")));
 };
 /* harmony default export */ var CoreAppComponent1 = (CoreAppComponentA);
 
 // CONCATENATED MODULE: ./src/CoreAppComponent2Lazy.tsx
 
 
-var CoreAppComponent2 = Object(external_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "9Wuz")); });
+var CoreAppComponent2 = Object(external_MFE_GLB_React_["lazy"])(function () { return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, "9Wuz")); });
 var CoreAppComponent2Lazy = function () {
-    return external_React_["createElement"]("div", { className: "central-comp" },
-        external_React_["createElement"](external_React_["Suspense"], { fallback: external_React_["createElement"]("p", null, "Loading CoreAppComponent2 ...") },
-            external_React_["createElement"](CoreAppComponent2, null)));
+    return external_MFE_GLB_React_["createElement"]("div", { className: "central-comp" },
+        external_MFE_GLB_React_["createElement"](external_MFE_GLB_React_["Suspense"], { fallback: external_MFE_GLB_React_["createElement"]("p", null, "Loading CoreAppComponent2 ...") },
+            external_MFE_GLB_React_["createElement"](CoreAppComponent2, null)));
 };
 /* harmony default export */ var src_CoreAppComponent2Lazy = (CoreAppComponent2Lazy);
 
@@ -256,20 +256,20 @@ console.log("Hello from App");
 
 
 
-external_ReactDOM_["render"](external_React_["createElement"](external_React_["Fragment"], null,
-    external_React_["createElement"](external_MFE_UIC_["Logo"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_UIC_["UIComponentA"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_UIC_["UIComponentBLazy"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_LAC_["LayoutComponentA"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](external_MFE_LAC_["LayoutComponentBLazy"], null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](CoreAppComponent1, null),
-    external_React_["createElement"]("hr", null),
-    external_React_["createElement"](src_CoreAppComponent2Lazy, null)), document.getElementById('root'));
+external_MFE_GLB_ReactDOM_["render"](external_MFE_GLB_React_["createElement"](external_MFE_GLB_React_["Fragment"], null,
+    external_MFE_GLB_React_["createElement"](external_MFE_UIC_["Logo"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](external_MFE_UIC_["UIComponentA"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](external_MFE_UIC_["UIComponentBLazy"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](external_MFE_LAC_["LayoutComponentA"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](external_MFE_LAC_["LayoutComponentBLazy"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](CoreAppComponent1, null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](src_CoreAppComponent2Lazy, null)), document.getElementById('root'));
 
 
 /***/ }),
@@ -284,14 +284,14 @@ module.exports = MFE.LAC;
 /***/ "cDcd":
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = MFE.GLB.React;
 
 /***/ }),
 
 /***/ "faye":
 /***/ (function(module, exports) {
 
-module.exports = ReactDOM;
+module.exports = MFE.GLB.ReactDOM;
 
 /***/ }),
 
