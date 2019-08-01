@@ -7,10 +7,10 @@ import CoreAppComponent1 from './CoreAppComponent1'
 import CoreAppComponent2Lazy from './CoreAppComponent2Lazy'
 
 import { Logo, UIComponentA, UIComponentBLazy } from 'ui-components';
-import { LayoutComponentA, LayoutComponentBLazy } from 'layout-components';
+import { LayoutComponentA, LayoutComponentBLazy, BuggyWidget } from 'layout-components';
 
 ReactDOM.render(
-  <>
+  <div className="container" style={{ margin: '40px auto' }}>
     <Logo />
     <hr />
     <UIComponentA />
@@ -24,5 +24,8 @@ ReactDOM.render(
     <CoreAppComponent1 />
     <hr />
     <CoreAppComponent2Lazy />
-  </>
+    <hr />
+    <BuggyWidget />
+    <hr />
+  </div>
 , document.getElementById('root'))

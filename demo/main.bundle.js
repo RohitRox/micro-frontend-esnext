@@ -256,7 +256,7 @@ console.log("Hello from App");
 
 
 
-external_MFE_GLB_ReactDOM_["render"](external_MFE_GLB_React_["createElement"](external_MFE_GLB_React_["Fragment"], null,
+external_MFE_GLB_ReactDOM_["render"](external_MFE_GLB_React_["createElement"]("div", { className: "container", style: { margin: '40px auto' } },
     external_MFE_GLB_React_["createElement"](external_MFE_UIC_["Logo"], null),
     external_MFE_GLB_React_["createElement"]("hr", null),
     external_MFE_GLB_React_["createElement"](external_MFE_UIC_["UIComponentA"], null),
@@ -269,7 +269,10 @@ external_MFE_GLB_ReactDOM_["render"](external_MFE_GLB_React_["createElement"](ex
     external_MFE_GLB_React_["createElement"]("hr", null),
     external_MFE_GLB_React_["createElement"](CoreAppComponent1, null),
     external_MFE_GLB_React_["createElement"]("hr", null),
-    external_MFE_GLB_React_["createElement"](src_CoreAppComponent2Lazy, null)), document.getElementById('root'));
+    external_MFE_GLB_React_["createElement"](src_CoreAppComponent2Lazy, null),
+    external_MFE_GLB_React_["createElement"]("hr", null),
+    external_MFE_GLB_React_["createElement"](external_MFE_LAC_["BuggyWidget"], null),
+    external_MFE_GLB_React_["createElement"]("hr", null)), document.getElementById('root'));
 
 
 /***/ }),

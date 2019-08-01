@@ -236,9 +236,61 @@ var LayoutComponentBLazy = function () {
 };
 /* harmony default export */ var lazy = (LayoutComponentBLazy);
 
+// CONCATENATED MODULE: ./src/components/BuggyWidget/index.tsx
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var BuggyWidget_ErrorBoundary = /** @class */ (function (_super) {
+    __extends(ErrorBoundary, _super);
+    function ErrorBoundary() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = { error: null, errorInfo: null };
+        return _this;
+    }
+    ErrorBoundary.prototype.componentDidCatch = function (error, errorInfo) {
+        console.log(this.state.error);
+        this.setState({
+            error: error,
+            errorInfo: errorInfo
+        });
+    };
+    ErrorBoundary.prototype.render = function () {
+        if (this.state.errorInfo) {
+            return (external_MFE_GLB_React_["createElement"]("div", { style: { border: '2px solid red' } },
+                external_MFE_GLB_React_["createElement"]("h2", { style: { color: 'red' } }, "Something went wrong with this widget.")));
+        }
+        return this.props.children;
+    };
+    return ErrorBoundary;
+}(external_MFE_GLB_React_["Component"]));
+var RealWidget = function () {
+    if (location.search.length > 0) {
+        throw new Error('Shit hit the fan!');
+    }
+    return external_MFE_GLB_React_["createElement"]("h1", null, "Hi I am buggy widget");
+};
+var BuggyWidget = function () {
+    return external_MFE_GLB_React_["createElement"](BuggyWidget_ErrorBoundary, null,
+        external_MFE_GLB_React_["createElement"](RealWidget, null));
+};
+/* harmony default export */ var components_BuggyWidget = (BuggyWidget);
+
 // CONCATENATED MODULE: ./src/index.ts
 /* concated harmony reexport LayoutComponentA */__webpack_require__.d(__webpack_exports__, "LayoutComponentA", function() { return components_LayoutComponentA; });
 /* concated harmony reexport LayoutComponentBLazy */__webpack_require__.d(__webpack_exports__, "LayoutComponentBLazy", function() { return lazy; });
+/* concated harmony reexport BuggyWidget */__webpack_require__.d(__webpack_exports__, "BuggyWidget", function() { return components_BuggyWidget; });
+
 
 
 
